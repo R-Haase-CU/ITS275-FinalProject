@@ -1,4 +1,4 @@
-package finalProject;
+package application;
 
 public class GoodCard extends HonusCard {
 
@@ -15,8 +15,7 @@ public class GoodCard extends HonusCard {
 		double e;
 
 		if (this.salesDate < 2020) {
-			// replace w/ exponential equation
-			e = 53788.861314 * this.salesDate + -107575554.907543;
+			e = 4 * Math.pow(10, -110) * Math.exp(0.1318 * this.salesDate);
 		} else {
 			e = 53788.861314 * this.salesDate + -107575554.907543;
 		}
