@@ -11,40 +11,39 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+<!-- created in SceneBuilder  -->
+
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ValueController">
    <children>
       <ImageView fitHeight="400.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../HonusFront.png" />
+            <Image url="@../../HonusFront.png" />
          </image>
       </ImageView>
       <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
          <children>
-            <Label text="Welcome!&#10;I am Honus Wagner Card Man, V2">
+            <Label text="Welcome to the&#10;Honus Wagner Card Man 2.0">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
-               <padding>
-                  <Insets left="10.0" right="5.0" top="5.0" />
-               </padding>
             </Label>
-            <Label text="I am more than happy to calculate the value of your T206 Honus Wagner Card. First, please select the quality of your card based on the PSA grade scale. Second, enter the date that you would like your card to be evaluated for. " wrapText="true">
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
-               </padding>
-            </Label>
-            <Label text="Quality of Card:">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-               <padding>
-                  <Insets top="5.0" />
-               </padding>
+            <Label text="The T-206 Honus Wagner card is the most valuable baseball card in history. Should you find yourself in possession of one of these cards, it may prove beneficial to get an accurate estimate of the value of such a card. Fortunately, version 2 of the Honus Wagner Card Man is here to help! With improved accuracy in value estimations and a new, easy to use interface, you can instantly see the value of your card at any date past, present, or future." wrapText="true">
                <VBox.margin>
-                  <Insets left="5.0" />
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </Label>
+            <Label text="Quality (In PSA Standard):" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
                </VBox.margin>
             </Label>
-            <Slider id="valueSlider" blockIncrement="1.0" majorTickUnit="1.0" max="4.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true">
+            <Slider fx:id="valueSlider" blockIncrement="1.0" majorTickUnit="1.0" max="4.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true">
                <padding>
                   <Insets left="10.0" right="10.0" top="5.0" />
                </padding>
@@ -52,48 +51,50 @@
                   <Insets />
                </VBox.margin>
             </Slider>
+            <Label fx:id="instructionsDate" text="Enter the year that you would like to see that value of your card:" wrapText="true">
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </Label>
             <HBox>
                <children>
-                  <Label text="Date of Valuation:">
+                  <Label text="Year of Valuation:">
                      <font>
-                        <Font name="System Bold" size="14.0" />
+                        <Font name="System Bold" size="13.0" />
                      </font>
                      <HBox.margin>
-                        <Insets left="5.0" right="10.0" />
+                        <Insets right="10.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField id="dateInput" prefHeight="25.0" prefWidth="96.0" promptText="Date" />
-                  <Button id="runButton" defaultButton="true" mnemonicParsing="false" onAction="#buttonClick" text="Check Value">
+                  <TextField fx:id="dateInput" prefHeight="25.0" prefWidth="96.0" promptText="0000" />
+                  <Button fx:id="runButton" defaultButton="true" mnemonicParsing="false" onAction="#buttonClick" text="Check Value">
                      <HBox.margin>
-                        <Insets left="5.0" right="5.0" />
+                        <Insets left="5.0" />
                      </HBox.margin>
                   </Button>
                </children>
                <VBox.margin>
-                  <Insets top="10.0" />
+                  <Insets />
                </VBox.margin>
             </HBox>
-            <HBox>
-               <children>
-                  <Label text="Value of Card:">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets left="5.0" right="10.0" />
-                     </HBox.margin>
-                  </Label>
-                  <Label fx:id="valueOutput" text="Label" />
-               </children>
-               <VBox.margin>
-                  <Insets top="10.0" />
-               </VBox.margin>
-            </HBox>
+            <Label text="Value of Card:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="valueOutput" wrapText="true">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
          </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+         </padding>
       </VBox>
       <ImageView fitHeight="400.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../Back.jpg" />
+            <Image url="@../../Back.jpg" />
          </image>
       </ImageView>
    </children>

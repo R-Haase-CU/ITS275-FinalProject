@@ -1,5 +1,5 @@
 
-package finalProject;
+package application;
 
 // Stores all of our known sales of the Honus Wagner card, one array for each card quality
 public class SalesHistoryDatabase {
